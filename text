@@ -1,0 +1,22 @@
+classi: giocatore dx sx
+interface: strategia attacco -> attack()
+due figlie: sda intensiva 2/3 fa punto, 1/3 concede punto
+            sda strategica 1/3 punto, 2/3 no effetto
+
+interface: strategia difesa -> defense()
+due figlie: sdd intensiva 1/5, fa punto, 2/5 concede punto, 2/5 no effetto
+            sdd strategica 1/5 concede punto, 4/5 no effetto
+
+instanziare 4 player (2 team 1 dx player (intensivo), 1 sx player (strategico))
+
+il programma deve creare due team,
+tirare un numero random per decidere chi inizia,
+sul team che inizia sceglie a caso un dei due giocatori che fa attack(),
+il giocatore random del secondo team fa defend() e poi attack(),
+poi un giocatore casuale del primo team fa defend() e poi attack() e così via...
+
+ogni volta che segna un punto si segna ma il gioco continua come detto sopra
+si arriva a 21 punti,
+
+una volta che un team supera i 15 punti il giocatore strategico (dx) diventa intensivo
+nell'altro team invece entrambi i giocatori diventano strategici.
